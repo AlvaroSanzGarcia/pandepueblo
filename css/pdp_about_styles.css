@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/*Author: Alvaro Sanz Garcia*/
+
+
+
+
+/* Aside Styles */
+
+body aside {
+   background-color: rgb(211, 211, 211);
+   text-align: justify;
+}
+
+body aside h1 {
+   background-color: black;
+   padding: 20px;
+   color: ivory;
+   font-size: 1.2em;
+   font-weight: normal;
+   letter-spacing: 0.2em;
+   line-height: 1.5em;
+   text-align: center;
+}
+
+body aside ul {
+   padding-left: 10px;
+   padding-right: 10px;
+   margin: 10px;
+   list-style: outside;
+}
+
+body aside li {
+   line-height: 1.8em;
+   margin-top: 10px;
+}
+
+/* Section Styles */
+
+section#main {
+   background: rgb(231, 231, 231);
+}
+
+/* Article Styles */
+
+article img {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+
+article.text {
+    border: 1px solid;
+}
+
+
+section#topics article {
+   border-radius: 20px;
+   padding: 20px 20px 0px 20px;   
+   margin: 10px;
+   text-align: justify;
+}
+
+
+section#topics article h1 {
+   color: black;
+   font-size: 2em;
+   letter-spacing: 0.2em;
+   line-height: 1em;
+   margin: 10px 0px 20px 0px;
+   padding-left: 12px;
+}
+
+section#topics article p {
+   margin: 12px;
+}
+
+
+

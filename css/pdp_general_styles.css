@@ -1,0 +1,76 @@
+﻿@charset "utf-8";
+
+/*Author: Alvaro Sanz Garcia*/
+
+
+
+
+/* HTML and Body Styles */
+
+html {
+   background: url(../img/pdp_background.jpg) center center / cover no-repeat fixed;
+   height: 100%;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 200px;
+   max-width: 1024px;
+   width: 100%;
+}
+
+
+
+/* Body Header Styles */
+
+body header {
+    background-color: transparent;
+}
+
+
+
+/* Horizonal Navigation Styles */
+
+nav.horizontal {
+   background-color: transparent;
+}
+
+nav.horizontal li {
+   color: rgb(31, 73, 125);
+   font-size: 2em;
+   line-height: 2em;
+   text-transform: uppercase;
+}
+
+nav.horizontal ul li a {
+   font-weight: bold;
+   display: block;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   text-align: center;
+   border-radius: 30px;
+}
+
+nav.horizontal ul li a#currentPage {
+   text-decoration: underline;
+}
+
+
+nav.horizontal ul li a:visited, nav.horizontal ul li a:link {
+   color: white;
+}
+
+nav.horizontal ul li a:hover, nav.horizontal ul li a:active {
+   background-color: rgb(245, 245, 245);
+   color: black;
+   transition: all 0.3s ease-in;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: transparent;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 0px;
+}

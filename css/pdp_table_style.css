@@ -1,0 +1,102 @@
+﻿@charset "utf-8";
+
+/*Author: Alvaro Sanz Garcia*/
+
+
+
+
+/*Table styling*/
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    margin: .5em 0 .9em;
+}
+
+table tr {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    background-color: #b89970;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background: #ccc;
+}
+
+/*Adds a hover effect to every row.*/
+table tr:hover td {
+    background: #839192;
+    color: #000;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+
+/*Media query for table responsive design*/
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+         border-bottom: 0;
+    }
+}
+

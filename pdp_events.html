@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Author: Alvaro Sanz Garcia -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Events - Pan De Pueblo Micro Bakery</title>
+
+    <!-- Stylesheets: All styles related to flexboxes are located in a file with the name 'flex' in it.
+    Common styles such as background image, navigation bar or footer can be found in 'pdp_general_styles'.
+    Each page has its style which can be found in the stylesheet with the name of the page and '_styles'
+    appended to it. There is also a CSS Reset style to 'reset' all of the default browser styles -->
+    <link href="css/pdp_reset.css" rel="stylesheet" />
+    <link href="css/pdp_events_styles.css" rel="stylesheet" />
+    <link href="css/pdp_general_styles.css" rel="stylesheet" />
+    <link href="css/pdp_events_flex.css" rel="stylesheet" />
+    <link href="css/pdp_navicon.css" rel="stylesheet" />
+    <link href="css/pdp_table_style.css" rel="stylesheet" />
+    <link href="css/pdp_form_styles.css" rel="stylesheet" />
+
+    <!-- Google fonts used for the main text on the Home page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+
+    <!-- Script for the form submission -->
+    <script src="submitForm.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="horizontal">
+            <a id="navicon" href="#">
+                <img src="img/navicon.png" alt="navigation" />
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pdp_events.html" id="currentPage">Events</a></li>
+                <li><a href="pdp_order.html">Order</a></li>
+                <li><a href="pdp_about.html">About</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- Introductory paragraph -->
+    <article class="intro">
+        <p>
+            Join us for a delightful array of freshly baked goods at your local farmers markets! Our
+            micro bakery will be setting up shop on the upcoming months. Be sure to stop by, say "hello",
+            and indulge in our assortment of breads, pastries, and more. We can’t wait to bring the
+            warmth of our oven to you!
+        </p>
+    </article>
+
+    <!-- Image -->
+    <div>
+        <img src="img/wheat.png" alt="wheat ear" id="wheatEar">
+    </div>
+
+
+    <!-- Table. The media query and styles for it are located in the pdp_table_style.css file listed at the top of the document -->
+    <table>
+        <caption>Upcoming Farmers Market Appearances:</caption>
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Farmers Market</th>
+                <th scope="col">Time</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr onclick="window.location='https://www.mplsfarmersmarket.com/'">
+                <td data-label="Date">June 8</td>
+                <td data-label="Farmers Market">Minneapolis Farmers Market</td>
+                <td data-label="Time">7:00AM - 1:00PM</td>
+                <td data-label="Location"> 312 East Lyndale Ave. N., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.facebook.com/p/The-Peoples-Market-MPLS-100091561415324/'">
+                <td data-label="Date">June 15</td>
+                <td data-label="Farmers Market">The Peoples’ Market of MPLS</td>
+                <td data-label="Time">12:00AM - 4:00PM</td>
+                <td data-label="Location">3658 Fremont Ave. N., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.neighborhoodrootsmn.org/nokomis-farmers-market'">
+                <td data-label="Date">June 11</td>
+                <td data-label="Farmers Market">Nokomis Farmers Market</td>
+                <td data-label="Time">4:00PM - 8:00PM</td>
+                <td data-label="Location">5167 Chicago Ave., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.millcityfarmersmarket.org/'">
+                <td data-label="Date">June 14</td>
+                <td data-label="Farmers Market">Mill City Farmers Market</td>
+                <td data-label="Time">9:00AM - 1:00PM</td>
+                <td data-label="Location">750 S. 2nd St., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.neighborhoodrootsmn.org/kingfield-farmers-market'">
+                <td data-label="Date">June 21</td>
+                <td data-label="Farmers Market">Kingfield Farmers Market</td>
+                <td data-label="Time">8:30AM - 1:00PM</td>
+                <td data-label="Location">4055 Nicollet Ave., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.facebook.com/lindenhillsfarmersmarket/'">
+                <td data-label="Date">June 28</td>
+                <td data-label="Farmers Market">Linden Hills Farmers Market</td>
+                <td data-label="Time">10:00AM - 1:00PM</td>
+                <td data-label="Location">2813 W. 43rd St., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://nacdi.org/programs/food-sovereignty/farmers-market/'">
+                <td data-label="Date">July 5</td>
+                <td data-label="Farmers Market">Four Sisters Farmers Market </td>
+                <td data-label="Time">11:00AM - 3:00PM</td>
+                <td data-label="Location">1414 Franklin Ave. E., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.northeastmarket.org/'">
+                <td data-label="Date">July 12</td>
+                <td data-label="Farmers Market">Northeast Minneapolis Farmers Market</td>
+                <td data-label="Time">9:00AM - 1:00PM</td>
+                <td data-label="Location">629 NE 2nd St., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://www.facebook.com/MidtownFarmersMarket/'">
+                <td data-label="Date">July 19</td>
+                <td data-label="Farmers Market">Midtown Farmers Market</td>
+                <td data-label="Time">8:00AM - 1:00PM</td>
+                <td data-label="Location">2225 E. Lake St., Mpls.</td>
+            </tr>
+            <tr onclick="window.location='https://stpaulfarmersmarket.com/'">
+                <td data-label="Date">July 20</td>
+                <td data-label="Farmers Market">Downtown St. Paul Farmers Market</td>
+                <td data-label="Time">8:00AM - 1:00PM</td>
+                <td data-label="Location">290 E. 5th St., St. Paul</td>
+            </tr>
+            <tr onclick="window.location='https://westsidefarmersmarket.net/'">
+                <td data-label="Date">July 26</td>
+                <td data-label="Farmers Market">West Side Farmers Market</td>
+                <td data-label="Time">9:00AM - 12:00PM</td>
+                <td data-label="Location">63 W. George St., St. Paul</td>
+            </tr>
+            <tr onclick="window.location='https://minnesotagrown.com/member/roseville-farmers-market/'">
+                <td data-label="Date">July 27</td>
+                <td data-label="Farmers Market">Roseville Farmers’ Market</td>
+                <td data-label="Time">8:00AM - 12:00PM</td>
+                <td data-label="Location">2131 Fairview Ave. N., Roseville</td>
+            </tr>
+            <tr onclick="window.location='https://minnesotagrown.com/member/securian-farmers-market/'">
+                <td data-label="Date">August 2</td>
+                <td data-label="Farmers Market">Securian Farmers Market</td>
+                <td data-label="Time">10:00AM - 1:30PM</td>
+                <td data-label="Location">400 N. Robert St., St. Paul</td>
+            </tr>
+            <tr onclick="window.location='https://minnesotagrown.com/member/signal-hills-mkt-west-st-paul/'">
+                <td data-label="Date">August 3</td>
+                <td data-label="Farmers Market">Signal Hills Market</td>
+                <td data-label="Time">8:00AM - 12:00PM</td>
+                <td data-label="Location">1225 S. Robert St., West St. Paul</td>
+            </tr>
+            <tr onclick="window.location='https://www.facebook.com/StLukeFarmersMarket/'">
+                <td data-label="Date">August 9</td>
+                <td data-label="Farmers Market">St. Luke’s Farmers Market</td>
+                <td data-label="Time">8:00AM - 1:00PM</td>
+                <td data-label="Location">1807 Field Ave., St. Paul</td>
+            </tr>
+            <tr onclick="window.location='https://www.facebook.com/LakeviewTerraceMarketMpls/'">
+                <td data-label="Date">August 16</td>
+                <td data-label="Farmers Market">Lakeview Terrace Farmers Market</td>
+                <td data-label="Time">9:00AM - 1:00PM</td>
+                <td data-label="Location">3769 Crystal Lake Blvd, Robbinsdale</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form for the user to subscribe for alerts -->
+    <div class="container">
+        <form action="submitForm.js" method="post">
+            <fieldset>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="alerts">Sign up for alerts and be the first to receive the latest news!:</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="alerts" name="EmailAlerts" type="email" min="0"
+                               pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter your email" />
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Pan De Pueblo &copy; &#8226; Minneapolis, MN
+    </footer>
+</body>
+</html>

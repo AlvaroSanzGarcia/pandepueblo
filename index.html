@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Author: Alvaro Sanz Garcia -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Home - Pan De Pueblo Micro Bakery</title>
+
+    <!-- Stylesheets: All styles related to flexboxes are located in a file with the name 'flex' in it.
+    Common styles such as background image, navigation bar or footer can be found in 'pdp_general_styles'.
+    Each page has its style which can be found in the stylesheet with the name of the page and '_styles'
+    appended to it. There is also a CSS Reset style to 'reset' all of the default browser styles -->
+    <link href="css/pdp_reset.css" rel="stylesheet" />
+    <link href="css/pdp_general_styles.css" rel="stylesheet" />
+    <link href="css/pdp_home_styles.css" rel="stylesheet" />
+    <link href="css/pdp_home_flex.css" rel="stylesheet" />
+    <link href="css/pdp_navicon.css" rel="stylesheet" />
+
+    <!-- Google fonts used for the main text of the page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header>
+        <nav class="horizontal">
+            <a id="navicon" href="#">
+                <img src="img/navicon.png" alt="navigation" />
+            </a>
+            <ul>
+                <li><a href="index.html" id="currentPage">Home</a></li>
+                <li><a href="pdp_events.html">Events</a></li>
+                <li><a href="pdp_order.html">Order</a></li>
+                <li><a href="pdp_about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container that holds a 'welcome' message and two buttons -->
+    <div id="welcome">
+        <h1 class="coiny-regular">WELCOME<br /> TO<br /> PAN<br /> DE<br /> PUEBLO</h1>
+        <p class="coiny-regular">
+            your sourdough home bakery
+        </p>
+
+        <button class="glow-on-hover" type="button" onclick="location.href='pdp_about.html'">READ MORE</button>
+        <button class="glow-on-hover" type="button" onclick="location.href='pdp_order.html'">BUY BREAD!</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Pan De Pueblo &copy; &#8226; Minneapolis, MN
+    </footer>
+</body>
+</html>

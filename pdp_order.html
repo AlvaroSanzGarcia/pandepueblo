@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Author: Alvaro Sanz Garcia -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Order - Pan De Pueblo Micro Bakery</title>
+
+    <!-- Stylesheets: All styles related to flexboxes are located in a file with the name 'flex' in it.
+    Common styles such as background image, navigation bar or footer can be found in 'pdp_general_styles'.
+    Each page has its style which can be found in the stylesheet with the name of the page and '_styles'
+    appended to it. There is also a CSS Reset style to 'reset' all of the default browser styles -->
+    <link href="css/pdp_reset.css" rel="stylesheet" />
+    <link href="css/pdp_general_styles.css" rel="stylesheet" />
+    <link href="css/pdp_form_styles.css" rel="stylesheet" />
+    <link href="css/pdp_order_flex.css" rel="stylesheet" />
+    <link href="css/pdp_navicon.css" rel="stylesheet" />
+    <link href="css/pdp_validate.css" rel="stylesheet" />
+
+    <!-- Google fonts used for the main text on the Home page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header>
+        <nav class="horizontal">
+            <a id="navicon" href="#">
+                <img src="img/navicon.png" alt="navigation" />
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pdp_events.html">Events</a></li>
+                <li><a href="pdp_order.html" id="currentPage">Order</a></li>
+                <li><a href="pdp_about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form to order bread. Validation and styles referenced above with style sheets-->
+    <div class="container">        
+        <form action="submitForm.js" method="post">
+            <p>
+                **Currently, we do not offer delivery services. All orders are available for pick-up,
+                ensuring that each loaf you receive is fresh from our oven to your table. We appreciate
+                your understanding and look forward to providing you with the best sourdough experience
+                through our convenient pick-up option.**
+            </p>
+
+            <!-- First fieldset: Build your order -->
+            <fieldset>
+                <legend>Build your order</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="plain">Plain sourdough -- $8</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="plain" name="SpinnerPlain" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="jalched">Jalapeño/Cheddar Sourdough -- $12</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="jalched" name="SpinnerJalched" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fetakal">Feta/Kalamata Sourdough -- $12</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="fetakal" name="SpinnerFetakal" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="agedched">Aged Cheddar/Caramelized Onion Sourdough -- $12</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="agedched" name="SpinnerAgeched" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="walraisin">Walnut/Raisin Sourdough -- $10</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="walraisin" name="SpinnerWalraisin" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="multigrain">Multigrain Sourdough -- $9</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="multigrain" name="SpinnerMultigrain" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="rye">Rye Sourdough -- $10</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="rye" name="SpinnerRye" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="garlic">Roasted Garlic/Roasemary Sourdough -- $12</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="garlic" name="SpinnerGarlic" type="number" min="0" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="magdalenas">Magdalenas (Spanish muffins) - 1 dozen -- $15</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="magdalenas" name="SpinnerMagdalenas" type="number" min="0" />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Second fieldset: Pick-up date -->
+            <fieldset>
+                <legend>Select a pick-up date</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="ptime">**Minimunm of 2 day notice required**</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="ptime" name="pickUpTime" type="date" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Third fieldset: Billing information -->
+            <fieldset>
+                <legend>Billing Information (required)</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="firstBox">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="firstBox" name="fName" type="text" placeholder="Your name" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lastBox">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="lastBox" name="lName" type="text" placeholder="Your last name" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="streetBox">Street Address</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="streetBox" name="street" type="text" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="streetBox2">Street Address (2)</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="streetBox2" name="street2" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cityBox">City</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="cityBox" name="city" type="text" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="stateBox">State</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="stateBox" name="state" type="text" required list="stateList" />
+                        <datalist id="stateList">
+                            <option value="AL">
+                            <option value="AK">
+                            <option value="AZ">
+                            <option value="CA">
+                            <option value="CO">
+                            <option value="CT">
+                            <option value="DE">
+                            <option value="FL">
+                            <option value="GA">
+                            <option value="HI">
+                            <option value="ID">
+                            <option value="IL">
+                            <option value="IN">
+                            <option value="IA">
+                            <option value="KS">
+                            <option value="KY">
+                            <option value="LA">
+                            <option value="ME">
+                            <option value="MD">
+                            <option value="MA">
+                            <option value="MI">
+                            <option value="MN">
+                            <option value="MS">
+                            <option value="MO">
+                            <option value="MT">
+                            <option value="NE">
+                            <option value="NV">
+                            <option value="NH">
+                            <option value="NJ">
+                            <option value="NM">
+                            <option value="NY">
+                            <option value="NC">
+                            <option value="ND">
+                            <option value="OH">
+                            <option value="OK">
+                            <option value="OR">
+                            <option value="PA">
+                            <option value="RI">
+                            <option value="SC">
+                            <option value="SD">
+                            <option value="TN">
+                            <option value="TX">
+                            <option value="UT">
+                            <option value="VT">
+                            <option value="VA">
+                            <option value="WA">
+                            <option value="WV">
+                            <option value="WI">
+                            <option value="WY">
+                        </datalist>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="zipBox">ZIP/Postal Code</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="zipBox" name="zip" type="text" pattern="^\d{5}(-\d{4})?$" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="countryBox">Country</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="countryBox" name="country" type="text" value="United States" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phoneBox">Phone</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="phoneBox" name="phone" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Forth fieldset: Credit card information -->
+            <fieldset>
+                <legend>Credit Card (required)</legend>
+                <div class="row">
+                    <div class="col-25"></div>
+                    <div class="col-75">
+                        <label class="cardLabel">
+                            <input name="cCard" value="amex" type="radio" required />
+                            <img src="img/amex.png" alt="amex"/>
+                        </label>
+                        <label class="cardLabel">
+                            <input name="cCard" value="discover" type="radio" />
+                            <img src="img/discover.png" alt="discover"/>
+                        </label>
+                        <label class="cardLabel">
+                            <input name="cCard" value="master" type="radio" />
+                            <img src="img/master.png" alt="master"/>
+                        </label>
+                        <label class="cardLabel">
+                            <input name="cCard" value="visa" type="radio" />
+                            <img src="img/visa.png" alt="visa"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cardBox">Credit Card Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="cardBox" name="cardNumber" type="text" required pattern="/(?<AMEX>3[47]\d\d[\s\-]?(?!(\d)\2{5}|123456|234567|345678)\d{6}[\s\-]?(?!(\d)[\s\-]{4}|12345|56789)\d{5})|(?<MASTERCARD>5[1-5]\d{2}[\s\-]?\d{4}[\s\-]?\d{4}[\s\-]?\d{4})|(?<VISA>4\d{3}[\s\-]?(?:\d{4}[\s\-]?){2}\d(?:\d{3})?)|(?<DISCOVER>6(?:011|22?=[\s\-]?[6-9]|[3-9]|[2-8]|9[\s\-]?[01]|2[0-5]|4[4-9]\d|5\d\d)[\s\-]?\d{4}[\s\-]?\d{4}[\s\-]?\d{4})/gm" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="monthList">Expiration Date</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="monthList" required>
+                            <option value="">--Month</option>
+                            <option value="01">January (01)</option>
+                            <option value="02">February (02)</option>
+                            <option value="03">March (03)</option>
+                            <option value="04">April (04)</option>
+                            <option value="05">May (05)</option>
+                            <option value="06">June (06)</option>
+                            <option value="07">July (07)</option>
+                            <option value="08">August (08)</option>
+                            <option value="09">September (09)</option>
+                            <option value="10">October (10)</option>
+                            <option value="11">November (11)</option>
+                            <option value="12">December (12)</option>
+                        </select>
+                        <select id="yearList" required>
+                            <option value="">--Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cscBox">CSC</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="cscBox" name="csc" pattern="^\d{3}$" maxlength="3" placeholder="nnn" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Fifth fieldset: Add a note to your order-->
+            <fieldset>
+                <legend>Notes</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="note">Add a note to your order</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="note" name="NoteInput" type="text" />
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Submit button -->
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+            Pan De Pueblo &copy; &#8226; Minneapolis, MN
+    </footer>
+</body>
+</html>

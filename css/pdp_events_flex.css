@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+
+/*Author: Alvaro Sanz Garcia*/
+
+
+
+
+/* ================
+   Base Flex Styles
+   ================
+*/
+
+
+header, footer {
+    width: 100%;
+}
+
+article {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+
+@media only screen and (max-width: 480px) {
+
+    aside {
+        order: 99;
+    }
+
+    footer {
+        order: 100;
+    }
+}
+
+/* ============================================
+   Tablet and Desktop Styles: 481px and greater 
+   ============================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+    nav.horizontal ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    nav.horizontal li {
+        flex: 1 1 auto;
+    }
+}

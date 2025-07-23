@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/*Author: Alvaro Sanz Garcia*/
+
+
+
+
+/* Validation Styles */
+input:not([type='radio']):focus {
+    background-color: rgb(255, 218, 165)
+}
+
+input:not([type='radio']):focus:valid {
+    background: rgb(215, 255, 215) url(../img/valid.png) right no-repeat
+}
+
+input:not([type='radio']):focus:invalid {
+    background: rgb(255, 245, 215) url(../img/invalid.png) right no-repeat
+}
+
